@@ -13,7 +13,6 @@ dotenv.config()
 const server = http.createServer((req, res) => {
   const decodedUrl = decodeURIComponent(req.url)
   let filePath = path.join(__dirname, '../src', decodedUrl)
-  console.log('🚀 ~ server ~ filePath:', filePath)
 
   // Если URL оканчивается на '/', добавляем к нему 'index.html'
   if (filePath.endsWith('/')) {
@@ -48,7 +47,8 @@ const server = http.createServer((req, res) => {
       const contentTypeMapping = {
         '.html': 'text/html',
         '.js': 'text/javascript',
-        '.css': 'text/css'
+        '.css': 'text/css',
+        '.ico': 'image/x-icon'
         // Другие типы файлов можно добавить по аналогии
       }
       contentType = contentTypeMapping[extname] || 'application/octet-stream'
