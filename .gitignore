@@ -1,6 +1,0 @@
-# Ignore files and directories
-/node_modules
-/build
-
-# Install dependencies
-package-lock.json
