@@ -1,8 +1,9 @@
-import { Container } from "./container/Container";
-import { Footer } from "./footer/Footer";
-import { Header } from "./header/Header";
+import { Container } from "./Container/Container";
+import { Footer } from "./Footer/Footer";
+import { Header } from "./Header/Header";
+import { PropsWithChildren } from "react";
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: PropsWithChildren) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
